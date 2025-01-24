@@ -1,0 +1,100 @@
+* {
+    font-family: "Red Hat Text", sans-serif;
+}
+
+.but {
+    border-radius: 50px;
+    background-color: white;
+    width: 140px;
+    border: 1px solid;
+    padding: 8px;
+    z-index: 9999999;
+}
+
+.cards {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: -40px 0 40px 70px;
+}
+
+.tit {
+    width: 40%;
+    margin: 25px 0 10px 82px;
+    font-weight: 700;
+}
+
+.card {
+    margin: 55px auto;
+    width: 250px;
+    height: 250px;
+}
+
+.card_img {
+    width: inherit;
+    height: inherit;
+}
+
+.card_img img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.card_title {
+    color: white;
+    text-align: center;
+    margin: -20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.min, .plus {
+    color: blue;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: brown;
+    border: 1px solid white;
+    width: 17px;
+    height: 17px;
+    padding: 3px;
+}
+
+.d-flex {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 8px;
+    position: absolute;
+    top: 230px;
+    opacity: 0;
+}
+
+.d-flex input {
+    border: 0;
+    width: 100px;
+    text-align: center;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.d-flex input:focus {
+    border: 1px;
+    outline: 1;
+    background-color: brown;
+}
+
+.text {
+    color: black;
+    text-align: left;
+    line-height: 1;
+    margin: 25px 0 10px;
+}
