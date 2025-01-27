@@ -11,7 +11,7 @@ images = [
 ];
 let container = ``;
 let imageIndex = 0;
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 5; i++) {
   container += `<div class="parent">`;
   for (let j = 0; j < 3; j++) {
     container += `<div class="product">`;
@@ -63,5 +63,6 @@ for (let i = 0; i < labelTypes.length; i++) {
     document.getElementsByClassName("add-to-cart")[i].style.visibility =
       "hidden";
     document.getElementsByClassName("add-to-cart")[i].style.opacity = "0";
+    document.getElementsByClassName("product-image")[i].style.border = "3px solid hsl(14, 86%, 42%)";
   };
 }

@@ -42,6 +42,7 @@ body {
 /* End Global Rules */
 
 /* Start Landing */
+
 .parent {
   width: 70%;
   display: grid;
@@ -61,6 +62,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  border: 1px solid transparent;
 }
 
 .add-to-cart,
@@ -69,28 +71,51 @@ body {
   padding: 15px;
   border-radius: 15px;
   position: absolute;
-  bottom: -28px;
+  bottom: -22px;
   right: 40px;
   text-align: center;
-  visibility: visible; 
-  opacity: 1; 
-  transition: opacity 0.3s ease; 
-
+  border: 1px solid hsl(14, 86%, 42%);
+  border-radius: 35px;
+  transition: opacity 0.3s ease;
 }
 
 .add-to-cart {
-  background-color: #aaa;
+  background-color: white;
   z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .counter {
-  background-color: #bbb;
+  background-color: hsl(14, 86%, 42%);
   z-index: 1;
   visibility: hidden; /* إخفاء الـ counter عند بداية الصفحة */
   opacity: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  color: white;
 }
+.increment-icon,
+.decrement-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+}
+
+.increment-icon:hover,
+.decrement-icon:hover {
+  cursor: pointer;
+}
+
 /* End Landing */
 /* .chick {
   width: 100%;
@@ -104,8 +129,8 @@ body {
   opacity: 0.5;
   background-color: black;
 }
-.chick .content{
+.chick .content {
   width: 30%;
-height: 60vh;
-background-color: white;
+  height: 60vh;
+  background-color: white;
 } */
