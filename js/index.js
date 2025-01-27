@@ -11,7 +11,7 @@ images = [
 ];
 let container = ``;
 let imageIndex = 0;
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 3; i++) {
   container += `<div class="parent">`;
   for (let j = 0; j < 3; j++) {
     container += `<div class="product">`;
@@ -27,8 +27,13 @@ for (let i = 0; i < 5; i++) {
       </div>
       <div class="counter">
         <img class="decrement-icon" src="images/icon-decrement-quantity.svg" alt="Decrement">
-        <label type="text" class="count-text" for="">1</label>
+        <label type="text" class="count-text" for="">1</label>                                    
         <img class="increment-icon" src="images/icon-increment-quantity.svg" alt="Increment">
+      </div>
+      <div class="product-id">
+      <p>Waffle</p>
+      <p> Waffle with Berries </p>
+      <p> 6.50</p>
       </div>`;
     container += `</div>`;
   }
@@ -51,6 +56,7 @@ for (let i = 0; i < labelTypes.length; i++) {
       document.getElementsByClassName("add-to-cart")[i].style.visibility =
         "visible";
       document.getElementsByClassName("add-to-cart")[i].style.opacity = "1";
+      document.getElementsByClassName("product-image")[i].style.border = "none";
     }
   };
   pushValues[i].onclick = function () {
@@ -63,6 +69,7 @@ for (let i = 0; i < labelTypes.length; i++) {
     document.getElementsByClassName("add-to-cart")[i].style.visibility =
       "hidden";
     document.getElementsByClassName("add-to-cart")[i].style.opacity = "0";
-    document.getElementsByClassName("product-image")[i].style.border = "3px solid hsl(14, 86%, 42%)";
+    document.getElementsByClassName("product-image")[i].style.border =
+      "3px solid var(--mainColor)";
   };
 }
