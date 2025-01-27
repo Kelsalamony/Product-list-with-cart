@@ -1,100 +1,111 @@
+/* Start Global Rules */
 * {
-    font-family: "Red Hat Text", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Text", serif;
+  background-color: hsl(13, 31%, 94%);
 }
 
-.but {
-    border-radius: 50px;
-    background-color: white;
-    width: 140px;
-    border: 1px solid;
-    padding: 8px;
-    z-index: 9999999;
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+}
+/* very small */
+
+@media (min-width: 375px) {
+  .container {
+    width: 360px;
+  }
+}
+/*  small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Landing */
+.parent {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+.product {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  margin-bottom: 40px;
 }
 
-.cards {
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: -40px 0 40px 70px;
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-.tit {
-    width: 40%;
-    margin: 25px 0 10px 82px;
-    font-weight: 700;
+.add-to-cart,
+.counter {
+  width: 70%;
+  padding: 15px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: -28px;
+  right: 40px;
+  text-align: center;
+  visibility: visible; 
+  opacity: 1; 
+  transition: opacity 0.3s ease; 
+
 }
 
-.card {
-    margin: 55px auto;
-    width: 250px;
-    height: 250px;
+.add-to-cart {
+  background-color: #aaa;
+  z-index: 2;
 }
 
-.card_img {
-    width: inherit;
-    height: inherit;
+.counter {
+  background-color: #bbb;
+  z-index: 1;
+  visibility: hidden; /* إخفاء الـ counter عند بداية الصفحة */
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
 }
-
-.card_img img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
+/* End Landing */
+/* .chick {
+  width: 100%;
+  height: 100vh;
+  color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  background-color: black;
 }
-
-.card_title {
-    color: white;
-    text-align: center;
-    margin: -20px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.min, .plus {
-    color: blue;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: brown;
-    border: 1px solid white;
-    width: 17px;
-    height: 17px;
-    padding: 3px;
-}
-
-.d-flex {
-    width: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: brown;
-    border: 1px solid;
-    border-radius: 50px;
-    padding: 8px;
-    position: absolute;
-    top: 230px;
-    opacity: 0;
-}
-
-.d-flex input {
-    border: 0;
-    width: 100px;
-    text-align: center;
-    background-color: brown;
-    cursor: pointer;
-}
-
-.d-flex input:focus {
-    border: 1px;
-    outline: 1;
-    background-color: brown;
-}
-
-.text {
-    color: black;
-    text-align: left;
-    line-height: 1;
-    margin: 25px 0 10px;
-}
+.chick .content{
+  width: 30%;
+height: 60vh;
+background-color: white;
+} */
